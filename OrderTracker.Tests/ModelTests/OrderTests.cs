@@ -51,5 +51,14 @@ namespace OrderTracker.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetId_OrdersAreHaveAnID_IDValue()
+    {
+      string description = "This is useless, I want an ID!";
+      Order newOrder = new Order(description);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
   }
 }
