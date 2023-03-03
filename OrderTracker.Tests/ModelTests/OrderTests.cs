@@ -70,7 +70,27 @@ namespace OrderTracker.Tests
       Order newOrder2 = new Order(description02, "placeholder", "placeholder", "placeholder");
       Order result = Order.Find(2);
       Assert.AreEqual(newOrder2, result);
-
     }
+
+    [TestMethod]
+    public void OrderConstructor_ReturnsAllPropertiesOfOrder_CompleteOrder()
+    {
+      string Title = "Order of Flour";
+      string Description = "Running out of Excess Flour, 20lbs";
+      string Price = "500$";
+      string Date = "10/15/20";
+      Order newOrder = new Order(Title, Description, Price, Date);
+      string titleResult = newOrder.Title;
+      string descriptionResult = newOrder.Description;
+      string priceResult = newOrder.Price;
+      string dateResult = newOrder.Date;
+                        
+      Assert.AreEqual(Title, titleResult);
+      Assert.AreEqual(Description, descriptionResult);
+      Assert.AreEqual(Price, priceResult);
+      Assert.AreEqual(Date, dateResult);
+      
+    }
+
   }
 }
