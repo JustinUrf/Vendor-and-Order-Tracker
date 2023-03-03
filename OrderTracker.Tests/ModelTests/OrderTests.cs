@@ -20,13 +20,23 @@ namespace OrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetOrder_ReturnsOrderDescription_Stirng()
+    public void OrderConstructor_ReturnsOrderDescription_Stirng()
     {
       string Description = "Order of Flour";
       Order newOrder = new Order(Description);
       string result = newOrder.Description;
 
       Assert.AreEqual(Description, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsAnEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order> {};
+
+      List<Order> result = Order.GetAll();
+
+      CollectionAssert.AreEqual(newList,result);
     }
   }
 }
