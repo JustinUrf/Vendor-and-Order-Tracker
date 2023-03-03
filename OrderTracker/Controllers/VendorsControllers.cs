@@ -5,7 +5,7 @@ using OrderTracker.Models;
 
 namespace OrderTracker.Controllers
 {
-  public class VendorsController : Controller
+  public class VendorsController : Controller 
   {
     [HttpGet("/vendors")]
     public ActionResult Index()
@@ -27,7 +27,7 @@ namespace OrderTracker.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpPost("/vendors/{id}")]
+    [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
