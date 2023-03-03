@@ -11,14 +11,15 @@
   </head>
   <body>
     @using OrderTracker.Models;
-
     <h3>Here are all the purchases in from this vendor:</h3>
 
     <ol>
     @foreach (Order order in @Model["orders"])
     {
+      <p>Hello?</p>
       <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
     }
+
     </ol>
 
     <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
