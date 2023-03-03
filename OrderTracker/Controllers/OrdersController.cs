@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using OrderTracker.Models;
 using System.Collections.Generic;
 
-namespace ToDoList.Controllers
+namespace OrderTracker.Controllers
 {
   public class OrdersController : Controller
   {

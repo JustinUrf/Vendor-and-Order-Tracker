@@ -9,21 +9,21 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous">
   </head>
-  <body>
-    @using OrderTracker.Models;
-    <h3>Here are all the purchases in from this vendor:</h3>
+    <body>
+      @using OrderTracker.Models;
 
-    <ol>
-    @foreach (Order order in @Model["orders"])
-    {
-      <p>Hello?</p>
-      <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
-    }
+      <h3>Here are all the purchases in from this vendor:</h3>
 
-    </ol>
+      <ol>
+      @foreach (Order order in @Model["orders"])
+      {
+        <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+      }
 
-    <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
-    <p><a href='/vendors'>Return to vendors list</a></p>
-    <p><a href='/'>Return to Main Page</a></p>
-  </body>
+      </ol>
+
+      <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+      <p><a href='/vendors'>Return to vendors list</a></p>
+      <p><a href='/'>Return to Main Page</a></p>
+    </body>
 </html>
