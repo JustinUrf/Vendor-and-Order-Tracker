@@ -18,5 +18,15 @@ namespace OrderTracker.Tests
       Order newOrder = new Order("Test");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+
+    [TestMethod]
+    public void GetOrder_ReturnsOrderDescription_Stirng()
+    {
+      string Description = "Order of Flour";
+      Order newOrder = new Order(Description);
+      string result = newOrder.Description;
+
+      Assert.AreEqual(Description, result);
+    }
   }
 }
