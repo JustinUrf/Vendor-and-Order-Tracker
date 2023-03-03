@@ -14,6 +14,18 @@ namespace OrderTracker.Tests
       Vendor newVendor = new Vendor("test vendor", "Sells General Goods");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
+    
+    [TestMethod]
+    public void GetVendorName_ReturnVendorName_String()
+    {
+      string vendorName = "Bob The Builder";
+      string Description = "He sells me the good good build build";
+      Vendor newVendor = new Vendor(vendorName, Description);
+      string vendorNameResult = newVendor.Name;
+      string descriptionResult = newVendor.Description;
+      Assert.AreEqual(vendorName, vendorNameResult);
+      Assert.AreEqual(Description, descriptionResult);
 
+    }
   }
 }
