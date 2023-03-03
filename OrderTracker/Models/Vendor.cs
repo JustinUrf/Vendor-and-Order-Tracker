@@ -29,6 +29,10 @@ namespace OrderTracker.Models
       _instances.Clear();
     }
 
+    public static Vendor Find(int vendorId)
+    {
+      return _instances[vendorId-1];
+    }
 
   }
 }
