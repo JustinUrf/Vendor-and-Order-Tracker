@@ -16,7 +16,7 @@ namespace OrderTracker.Tests
     }
     
     [TestMethod]
-    public void GetVendorName_ReturnVendorName_String()
+    public void GetVendorName_ReturnVendorNameAndDescription_String()
     {
       string vendorName = "Bob The Builder";
       string Description = "He sells me the good good build build";
@@ -25,7 +25,16 @@ namespace OrderTracker.Tests
       string descriptionResult = newVendor.Description;
       Assert.AreEqual(vendorName, vendorNameResult);
       Assert.AreEqual(Description, descriptionResult);
+    }
 
+    [TestMethod]
+    public void GetVendorId_ReturnsVendorId_Int()
+    {
+      string vendorName = "Totally not an AI";
+      string Description = "Real person that I buy real product from";
+      Vendor newVendor = new Vendor(vendorName, Description);
+      int result = newVendor.Id;
+      Assert.AreEqual(1, result);
     }
   }
 }
