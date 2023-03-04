@@ -10,23 +10,20 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <h3>Vendor: @Model["vendor"].Name</h3>
-    <h1> Order Title </h1>
-    <h2>@Model["order"].Title</h2>
-    <br>
-    <h1>Order Description </h1>
-    <h2>@Model["order"].Description</h2>
-    <br>
-    <h1>Order Price </h1>
-    <h2>@Model["order"].Price</h2>
-    <br>
-    <h1>Order Date </h1>
-    <h2>@Model["order"].Date</h2>
+    <div class="container">
+      <h1> Order Title : @Model["order"].Title </h1>
+      <p>Order Description @Model["order"].Description <p>
+      <p>Order Price @Model["order"].Price</p>
+      <p>Order Date @Model["order"].Date </p>
+
+      <a href='/vendors/@Model["vendor"].Id/orders/new' class="btn btn-info" role="button">Add Another Item</a>
+
+      <a href='/vendors' class="btn btn-danger">View all vendors</a>
+    </div>
 
 
 
 
-    <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another item</a>
-    <a href='/vendors'>View all vendors</a>
+
   </body>
 </html>
