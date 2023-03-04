@@ -10,20 +10,21 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <h1>Order Tracker</h1>
-    <p>Add a vendor here:</p>
+    <div class="container">
+      <h1>Order Tracker</h1>
+      <h2>Add a vendor here:</h2>
+      <form action="/vendors" method="post">
+        <label for="vendorName">Vendor</label>
+        <input id="vendorName" name="vendorName" type="text">
 
-    <form action="/vendors" method="post">
-      <label for="vendorName">Vendor</label>
-      <input id="vendorName" name="vendorName" type="text">
+        <label for="vendorDescription">Description</label>
+        <input id="vendorDescription" name="vendorDescription" type="text">
 
-      <label for="vendorDescription">Description</label>
-      <input id="vendorDescription" name="vendorDescription" type="text">
-
-      <button type="submit">Add</button>
-    </form>
-
-    <p><a href="/">Back home</a></p>
-    <p><a href="/vendors">Back to Vendors.</a></p>
+        <button type="submit" class="btn btn-success">Add</button>
+      </form>
+      <br>
+      <p><a href="/" class="btn btn-info">Back home</a></p>
+      <p><a href="/vendors" class="btn btn-danger">Back to Vendors</a></p>
+    </div>
   </body>
 </html>
